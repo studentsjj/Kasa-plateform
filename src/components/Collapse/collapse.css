@@ -1,0 +1,49 @@
+.collapse-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+    font-family: 'Montserrat';
+}
+
+.collapse-label {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 13px;
+    background-color: #ff6060;
+    border-radius: 5px;
+    padding: 8px;
+    line-height: 19px;
+}
+
+.collapse-label button{
+    border: none;
+    background-color: transparent;
+}
+
+.collapse-label img{
+    width: 16px;
+    height: 9px;
+}
+
+.collapse-text{
+    margin-top: 0;
+}
+
+.collapse-text {
+    color: #ff6060;
+    background: #f7f7f7;
+    margin-top: 0;
+    border-radius: 5px;
+    padding : 20px 10px 10px 10px;
+    
+}
+
+.collapse-text ul{
+    margin: 5px;
+    padding-left: 10px;
+    text-align: start;
+    list-style-type: none;
+
+}

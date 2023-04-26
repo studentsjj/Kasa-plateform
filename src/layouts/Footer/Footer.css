@@ -1,0 +1,19 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    color: white;
+   
+}
+
+.footer img{
+    width : 122px;
+    margin: auto;
+}
+.footer p{
+    margin: auto;
+    padding-top: 30px;
+    font-size: 12px;
+}

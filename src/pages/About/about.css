@@ -1,0 +1,15 @@
+main{
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+.about {
+    margin: 20px;
+}
+
+.about img {
+    object-fit: cover;
+    border-radius: 10px;
+    height: 223px;
+    width: 100%
+}

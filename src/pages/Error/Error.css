@@ -1,0 +1,22 @@
+.page-error {
+    text-align: center;
+    margin-top: 25%;
+    padding: 0, 20px,0,20px;
+    font-family: 'Montserrat';
+    color: #FF6060 ;
+    height: 62vh;
+}
+.page-error-number{
+    font-size: 96px;
+    font-weight: 700;
+}
+
+.page-error p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.page-error link {
+    text-decoration-line: underline;
+}
+

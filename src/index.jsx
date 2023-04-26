@@ -2,7 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home';
+import About from './pages/About';
+import Accomodation from './pages/Accomodation';
+import Error from './pages/Error';
 import reportWebVitals from './reportWebVitals';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -10,6 +15,9 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route path="/About" element= {<About />} />
+        <Route path="/Accomodation/:id" element= {<Accomodation />} />
+        <Route path="*" element= {<Error />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
