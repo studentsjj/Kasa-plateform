@@ -1,29 +1,42 @@
-import React from "react"
-import {useParams} from 'react-router-dom'
-import datas from "../../datas.json"
-import Collapse from "../../components/Collapse"
-import Rating from "../../components/Rating"
+import React from "react";
+import Collapse from "../../components/Collapse";
+import Rating from "../../components/Rating";
+import Tag from "../../components/Tag";
+import "./cardLogement.css";
 
-
-function CardLogement() {
-   const {id} = useParams();
-   const accomodations = datas.find(accomodation => accomodation.id === id);
-
-   return (  
+function CardLogement({ accomodations }) {
+   
+      return (
          <div>
-            <p>{accomodations.title}</p>
-            <p>{accomodations.location}</p>
-            <span>{accomodations.tags.map((tag,index) => <ul key={index}>
-                  <li>{tag}</li>
-               </ul>)}</span>
-            <Rating value={5} rating={accomodations.rating} />
-            <p>{accomodations.host.name}</p>
-            <img src={accomodations.host.picture} alt=""/>
-            <Collapse title="Description" text ={accomodations.description}/> 
-            <Collapse title="Equipements" text={accomodations.equipments.map((equipment,index) => <ul key={index}>
-                  <li>{equipment}</li>
-               </ul>)} /> 
+               <div className="accomodation-banner">
+                  <div className="accomodation-banner-title">
+                     <h1>{accomodations.title}</h1>
+                     <h2>{accomodations.location}</h2>
+                     <div className="accomodation-container-tag">
+                           {accomodations.tags.map((tag, index) => (
+                              <Tag tags={tag} key={index} />
+                           ))}
+                     </div>
+                  </div>
+                  <div className="accomodation-container-rating-host">
+                     <Rating value={"5"} rating={accomodations.rating} />
+                     <div className="accomodation-host">
+                           <p>{accomodations.host.name}</p>
+                           <img src={accomodations.host.picture} alt="" />
+                     </div>
+                  </div>
+               </div>
+               <div className="accomodation-collapse-container">
+                  <Collapse
+                     title="Description"
+                     content={accomodations.description}
+                  />
+                  <Collapse
+                     title="Equipements"
+                     content={accomodations.equipments}
+                  />
+               </div>
          </div>
-    )
+      );
 }
-export default CardLogement
+export default CardLogement;

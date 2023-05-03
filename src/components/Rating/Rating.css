@@ -1,3 +1,9 @@
 .rating{
-    width:100%;
+    margin: 20px 0 20px 0;
+
     }
+.rating img{
+    margin-left: 6px;
+    width: 1em;
+    height: 1em;
+}

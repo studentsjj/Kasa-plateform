@@ -1,31 +1,47 @@
-import React from "react"
-import Header from "../../layouts/Header"
-import Footer from "../../layouts/Footer"
-import Banner from "../../components/Banner"
-import Card from "../../components/Card"
-import "./Home.css"
-import {Link} from "react-router-dom";
-import datas from "../../datas.json"
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import Error from "../Error";
+import Header from "../../layouts/Header";
+import Footer from "../../layouts/Footer";
+import Banner from "../../components/Banner";
+import Card from "../../components/Card";
+import useFetch from "../../utils";
+import "./home.scss";
 
+function Home() {
+    const { data, isLoading, error } = useFetch(`data.json`);
+    useEffect(() => {
+        document.title = "Kasa, chez vous, partout et ailleurs";
+    }, []);
+    if (error) {
+        return <Error />;
+    }
 
-
-function Home () {
     return (
         <>
-            <Header/>
+            <Header />
             <main>
                 <Banner />
-                {datas.map((accomodation) => {
-                    return (
-                    <article key={accomodation.id}>
-                        <Link to={`/Accomodation/${accomodation.id}`}>
-                        <Card cover={accomodation.cover} title={accomodation.title}/>
-                        </Link>
-                    </article>)})}
+                <div className="gallery">
+                    {isLoading ? (
+                        <div>Chargement...</div>
+                    ) : (
+                        data &&
+                        data.map((accomodation) => (
+                            <div className="gallery-card" key={accomodation.id}>
+                                <Link to={`/Accomodation/${accomodation.id}`}>
+                                    <Card
+                                        cover={accomodation.cover}
+                                        title={accomodation.title}
+                                    />
+                                </Link>
+                            </div>
+                        ))
+                    )}
+                </div>
             </main>
-            <Footer/>
+            <Footer />
         </>
-    )
+    );
 }
-
-export default Home
+export default Home;

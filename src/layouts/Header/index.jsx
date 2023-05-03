@@ -1,8 +1,7 @@
 import React from "react";
-import logo_red from "../../assets/logo_red.png"
 import {Link} from "react-router-dom";
-
-import "./Header.css"
+import logo_red from "../../assets/logo_red.png"
+import "./header.css"
 
 function Header(){
     return(
@@ -10,10 +9,10 @@ function Header(){
           <img src={logo_red} alt="logo" />
           <ul className="navbar">
             <li className="navbar-li">
-              <Link to="/" style={{"textDecorationLine":"none"}}>Accueil</Link>
+              <Link to="/" >Accueil</Link>
             </li>
             <li className="navbar-li">
-              <Link to="/About" style={{"textDecorationLine":"none"}}>à propos</Link>
+              <Link to="/About">à propos</Link>
             </li>
           </ul>
       </header>
