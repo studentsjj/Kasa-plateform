@@ -8,7 +8,9 @@ function Card({cover,title}){
         <div  className="card-container">
             <div className ="card"  >
                 <img src={cover} alt={title} />
-                <span> {title} </span>
+                <div className="card-img-filter">
+                    <span> {title} </span>
+                </div>
             </div>
         </div>
     )

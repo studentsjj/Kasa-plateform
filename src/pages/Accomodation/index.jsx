@@ -3,9 +3,9 @@ import { useParams, Navigate } from "react-router-dom";
 import Error from "../Error"
 import Header from "../../layouts/Header";
 import Footer from "../../layouts/Footer";
-import CardLogement from "../../components/CardLogement";
+import CardAccomodation from "../../components/CardAccomodation";
 import Slideshow from "../../components/Slideshow";
-import "./accomodation.css";
+import "./accomodation.scss";
 
 
 function Accomodation() {
@@ -43,7 +43,7 @@ function Accomodation() {
                 <Error /> ): (
                     <div>
                         <Slideshow accomodations={accomodation} />
-                        <CardLogement accomodations={accomodation} />
+                        <CardAccomodation accomodations={accomodation} />
                     </div>
                 ))}
             </main>

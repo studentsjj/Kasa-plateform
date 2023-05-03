@@ -1,10 +1,10 @@
 import React from "react";
-import Collapse from "../../components/Collapse";
-import Rating from "../../components/Rating";
-import Tag from "../../components/Tag";
-import "./cardLogement.css";
+import Collapse from "../Collapse";
+import Rating from "../Rating";
+import Tag from "../Tag";
+import "./cardAccomodation.scss";
 
-function CardLogement({ accomodations }) {
+function CardAccomodation ({accomodations }) {
    
       return (
          <div>
@@ -27,16 +27,20 @@ function CardLogement({ accomodations }) {
                   </div>
                </div>
                <div className="accomodation-collapse-container">
+               <span className="accomodation-collapse">
                   <Collapse
                      title="Description"
                      content={accomodations.description}
-                  />
+                     id="accomodation-collapse-description"
+                  /></span>
+                  <span className="accomodation-collapse">
                   <Collapse
                      title="Equipements"
                      content={accomodations.equipments}
-                  />
+                     
+                  /></span>
                </div>
          </div>
       );
 }
-export default CardLogement;
+export default CardAccomodation;

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import icon_min from "../../assets/icon_min.png";
 import icon_plus from "../../assets/icon_plus.png";
-import "../Collapse/collapse.css";
+import "./collapse.scss";
 
 function Collapse({ title, content }) {
     const [isOpen, setIsOpen] = useState(false);
-    
+
     return (
         <div className="collapse-container">
             <span className="collapse-label">
@@ -22,14 +22,20 @@ function Collapse({ title, content }) {
                     )}
                 </button>
             </span>
-            {isOpen? (Array.isArray(content)? (content.map((content, index) => (
-                <span key={index} >
-                    <ul className ="collapse-content-ul">
-                        <li >{content}</li>
-                    </ul>
-                </span> ))) : <span className="collapse-content">{content}</span>): null}
+            {isOpen ? (
+                Array.isArray(content) ? (
+                    content.map((content, index) => (
+                        <span key={index}>
+                            <ul className="collapse-content-ul">
+                                <li>{content}</li>
+                            </ul>
+                        </span>
+                    ))
+                ) : (
+                    <span className="collapse-content">{content}</span>
+                )
+            ) : null}
         </div>
     );
 }
 export default Collapse;
-

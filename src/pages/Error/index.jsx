@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Header from "../../layouts/Header";
 import Footer from "../../layouts/Footer";
-import "./error.css";
+import "./error.scss";
 
 function Error() {
     return (

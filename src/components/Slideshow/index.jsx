@@ -1,7 +1,7 @@
 import { useState } from "react";
 import icon_prev from "../../assets/icon_prev.png";
 import icon_next from "../../assets/icon_next.png";
-import "./slideshow.css";
+import "./slideshow.scss";
 
 function Slideshow({ accomodations }) {
     const lenghtPictures = accomodations.pictures.length;

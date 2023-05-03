@@ -3,16 +3,15 @@
 html, body{
     margin: 0;
     padding:0;
-    min-height:100%;
+    min-height:100vh;
     box-sizing: border-box;
 }
 
-body {
+body{
     position: relative;
-    height: 100%;
-    padding-bottom: 20px;
     font-family:'Montserrat';
     color: #FF6060;
+    padding-bottom: 20px;;
 }
 
 main{
@@ -39,7 +38,7 @@ article h1{
     }
      .gallery{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
         margin-top: 20px;
         padding: 0 1.5em 1.5em 1.5em;
@@ -51,6 +50,8 @@ article h1{
         width:32%;
         margin:0;
     }
-   
+    .card span{
+        top: 70%;
+    }
     
 }

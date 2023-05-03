@@ -1,6 +1,6 @@
 import star_empty from "../../assets/star_empty.png";
 import star_full from "../../assets/star_full.png";
-import "./rating.css";
+import "./rating.scss";
 
 function Rating({ value, rating }) {
     const nbStars = value;
