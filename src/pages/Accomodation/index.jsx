@@ -22,7 +22,11 @@ function Accomodation() {
                 const accomodation = accomodationsData.find(
                     (accomodation) => accomodation.id === accomodationUrl.id
                 );
+                if (!accomodationUrl.id) {
+                    <Navigate to = "/Error" />
+                }else{
                 setAccomodation(accomodation);
+                }
             } catch (err) {
                 console.log(err);
                 setError(true);
@@ -33,7 +37,7 @@ function Accomodation() {
         fetchData();
     }, [accomodationUrl.id]);
 
-    return accomodationUrl && accomodation ?(
+    return accomodation ?(
         <>
             <Header />
             <main>
@@ -49,6 +53,6 @@ function Accomodation() {
             </main>
             <Footer />
         </>
-    ) : <Navigate to = "/Error" />
+    ) : <Navigate to = "/Error" />;
 }
 export default Accomodation;

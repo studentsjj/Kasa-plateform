@@ -7,11 +7,8 @@ function Rating({ value, rating }) {
     const emptyStars = Array.from({ length: nbStars }, (star, index) => "");
     const ratingStars = () => {
         return emptyStars.map((star, index) =>
-            index < rating ? (
-                <img key={index} src={star_full} alt="" />
-            ) : (
-                <img key={index} src={star_empty} alt="" />
-            )
+        <img key={index} src={index < rating ? star_full : star_empty} alt="" />
+            
         );
     };
 

@@ -1,4 +1,4 @@
-function Tag({ tags }) {
-    return <div className="accomodation-tag">{tags}</div>;
+function Tag({ tag }) {
+    return <div className="accomodation-tag">{tag}</div>;
 }
 export default Tag;

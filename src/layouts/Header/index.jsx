@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import logo_red from "../../assets/logo_red.png"
 import "./header.scss"
 
@@ -9,10 +9,10 @@ function Header(){
           <img src={logo_red} alt="logo" />
           <ul className="navbar">
             <li className="navbar-li">
-              <Link to="/" >Accueil</Link>
+              <NavLink to="/" className={({isActive}) => isActive? "active" : undefined}>Accueil</NavLink>
             </li>
             <li className="navbar-li">
-              <Link to="/About">à propos</Link>
+              <NavLink to="/About" className={({isActive}) => isActive? "active" : undefined}>à propos</NavLink>
             </li>
           </ul>
       </header>

@@ -1,34 +1,13 @@
 
-.accomodation-container-tag{
-    display: flex;
-    justify-content: flex-start;
-}
 
-.accomodation-tag {
-    display: flex;
-    justify-content: center;
-    line-height: 150%;
-    padding: 6px;
-    margin-right: 0.75em;
-    border-radius: 5px;
-    font-size: 0.75em;
-    color: white;
-    background-color: #FF6060;
-    list-style-type: none;
-}
 @media only screen and (min-width: 768px){
-    .img-slideshow img{
+    .slideshow-img{
         height: 415px;
     }
-    .slideshow-btn-count{
-        width: 95%;
-        height: 180px;
-       
-    }
+   
     .slideshow-count{
         color: white;
-        
-    }
+        }
     .accomodation-collapse-container{
         display: flex;
         justify-content: space-between;

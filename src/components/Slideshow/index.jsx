@@ -6,48 +6,38 @@ import "./slideshow.scss";
 function Slideshow({ accomodations }) {
     const lenghtPictures = accomodations.pictures.length;
     const [count, setCount] = useState(0);
-    const pictures = () => {
-        return accomodations.pictures.map(
-            (picture, index) =>
-                index === count && <img key={index} src={picture} alt="" />
-        );
+    const prevSlide = () => {
+        count === 0 ? setCount(lenghtPictures - 1) : setCount(count - 1);
     };
-    const btnSlideshow = () => {
-        return lenghtPictures > 1 ? (
-            <div className="slideshow-btn-count">
-                <div className="btn-slideshow">
-                    <button
-                        id="btn-prev"
-                        onClick={() =>
-                            count === 0
-                                ? setCount(lenghtPictures - 1)
-                                : setCount(count - 1)
-                        }
-                    >
-                        <img src={icon_prev} alt="" />
-                    </button>
-                    <button
-                        id="btn-next"
-                        onClick={() =>
-                            count === lenghtPictures - 1
-                                ? setCount(0)
-                                : setCount(count + 1)
-                        }
-                    >
-                        <img src={icon_next} alt="" />
-                    </button>
-                </div>
-                <span className="slideshow-count">
-                    {count + 1}/{lenghtPictures}
-                </span>
-            </div>
-        ) : null;
+    const nextSlide = () => {
+        count === lenghtPictures - 1 ? setCount(0) : setCount(count + 1);
     };
 
     return (
         <div className="slideshow">
-            <div className="img-slideshow">{pictures()}</div>
-            <div className="btn-slideshow-container">{btnSlideshow()}</div>
+                {accomodations.pictures.map((picture, index) => {
+                    return (
+                        index === count && (
+                            <img className="slideshow-img" key={index} src={picture} alt="" />
+                        )
+                    );
+                })}
+            
+                {lenghtPictures > 1 ?
+                (<div className="btn-count-accomodation">
+                        
+                                <img id="btn-prev" onClick={prevSlide} src={icon_prev} alt="" />
+                            
+                           
+                                <img id="btn-next" onClick={nextSlide} src={icon_next} alt="" />
+                           
+                        
+                        <span className="slideshow-count">
+                            {count + 1}/{lenghtPictures}
+                        </span>
+                    
+               </div>) : null }
+           
         </div>
     );
 }

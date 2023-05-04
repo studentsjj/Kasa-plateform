@@ -14,7 +14,7 @@ function CardAccomodation ({accomodations }) {
                      <h2>{accomodations.location}</h2>
                      <div className="accomodation-container-tag">
                            {accomodations.tags.map((tag, index) => (
-                              <Tag tags={tag} key={index} />
+                              <Tag tag={tag} key={index} />
                            ))}
                      </div>
                   </div>

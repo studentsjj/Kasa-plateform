@@ -1,0 +1,17 @@
+.accomodation-container-tag{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.accomodation-tag {
+    display: flex;
+    justify-content: center;
+    line-height: 150%;
+    padding: 6px;
+    margin-right: 0.75em;
+    border-radius: 5px;
+    font-size: 0.75em;
+    color: white;
+    background-color: #FF6060;
+    list-style-type: none;
+}

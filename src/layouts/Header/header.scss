@@ -25,9 +25,13 @@ a:-webkit-any-link {
     cursor: pointer;
     font-size: 0.75em;
     font-weight: 500;
-  }
+    }
 
-  @media only screen and (min-width: 768px){
+a.active{
+    text-decoration-line: underline ;
+}
+
+@media only screen and (min-width: 768px){
     .header{
         margin: 40px 100px 0 100px;
     }

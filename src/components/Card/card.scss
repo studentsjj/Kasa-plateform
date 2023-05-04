@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
 }
-.card img{
+.card-img{
     width : 100%;
     height: 255px;
     object-fit: cover;
@@ -10,18 +10,8 @@
     border-radius: 10px;
 }
 
-.card span{
-    position: absolute;
-    bottom: 0;
-    top:80%;
-    left: 10px;
-    right: 0;
-    color: white;
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-.card-img-filter{
+.card::after{
+    content:"";
     position: absolute;
     margin-top: 30px;
     bottom: 0;
@@ -31,5 +21,18 @@
     width : 100%;
     height: 255px;
     border-radius: 10px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-} 
+    z-index:1;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);  
+}
+
+.card-title{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    z-index:2;
+}
+
