@@ -1,15 +1,12 @@
-.rating{
+.rating {
     margin: 20px 0 20px 0;
-
-    }
-.rating img{
-    margin-left: 6px;
-    width: 1em;
-    height: 1em;
-}
-@media only screen and (min-width: 768px){
-    .rating img{
-        width: 1.5em;
-        height: 1.5em;
+    & img {
+        margin-left: 6px;
+        width: 1em;
+        height: 1em;
+        @media only screen and (min-width: 768px) {
+            width: 1.5em;
+            height: 1.5em;
+        }
     }
 }

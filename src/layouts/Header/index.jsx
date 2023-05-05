@@ -7,11 +7,11 @@ function Header(){
     return(
       <header className="header">
           <img src={logo_red} alt="logo" />
-          <ul className="navbar">
-            <li className="navbar-li">
+          <ul className="header__navbar">
+            <li className="header__navbar--li">
               <NavLink to="/" className={({isActive}) => isActive? "active" : undefined}>Accueil</NavLink>
             </li>
-            <li className="navbar-li">
+            <li className="header__navbar--li">
               <NavLink to="/About" className={({isActive}) => isActive? "active" : undefined}>à propos</NavLink>
             </li>
           </ul>

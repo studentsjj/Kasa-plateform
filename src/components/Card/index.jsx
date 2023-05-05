@@ -1,16 +1,12 @@
 import React from "react";
-import "./card.scss"
+import "./card.scss";
 
-
-function Card({cover,title}){
-    
+function Card({ cover, title }) {
     return (
-        
-            <div className ="card">
-                <img className="card-img" src={cover} alt={title} />
-                
-                <h2 className="card-title"> {title} </h2>
-            </div>
-         )
+        <div className="card">
+            <img className="card__img" src={cover} alt={title} />
+            <h2 className="card__title"> {title} </h2>
+        </div>
+    );
 }
-export default Card
+export default Card;

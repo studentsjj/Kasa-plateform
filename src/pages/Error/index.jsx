@@ -5,17 +5,17 @@ import "./error.scss";
 
 function Error() {
     return (
-        <div>
+        <>
             <Header />
             <div className="page-error">
-                <span className="page-error-number">404</span>
+                <span className="page-error__number">404</span>
                 <p>Oups ! La page que vous demandez n'existe pas.</p>
-                <Link to="/" style={{ textDecorationLine: "underline" }}>
+                <Link to="/" >
                     Retourner sur la page d'accueil
                 </Link>
             </div>
             <Footer />
-        </div>
+        </>
     );
 }
 export default Error;

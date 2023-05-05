@@ -13,6 +13,9 @@ function Home() {
     useEffect(() => {
         document.title = "Kasa, chez vous, partout et ailleurs";
     }, []);
+    useEffect(() => {
+        document.documentElement.lang = "fr";
+    });
     if (error) {
         return <Error />;
     }
@@ -28,7 +31,7 @@ function Home() {
                     ) : (
                         data &&
                         data.map((accomodation) => (
-                            <div className="gallery-card" key={accomodation.id}>
+                            <div className="gallery__card" key={accomodation.id}>
                                 <Link to={`/Accomodation/${accomodation.id}`}>
                                     <Card
                                         cover={accomodation.cover}

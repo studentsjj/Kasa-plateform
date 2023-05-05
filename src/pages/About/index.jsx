@@ -22,10 +22,12 @@ function About() {
         <>
             <Header />
             <main>
-                <div className="about">
-                    <img src={img_about} alt="paysage de montagne" />
-                </div>
-                <div className="about-collapse">
+                <img
+                    className="about__img"
+                    src={img_about}
+                    alt="paysage de montagne"
+                />
+                <div className="about__collapse">
                     <Collapse title={title1} content={content1} />
                     <Collapse title={title2} content={content2} />
                     <Collapse title={title3} content={content3} />

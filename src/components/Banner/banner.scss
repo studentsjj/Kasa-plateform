@@ -1,33 +1,29 @@
-article{
+article {
     position: relative;
-}
 
-article img{
-    height: 111px;
-    width : 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    filter: brightness(70%);
-}
-
-article h1{
-    position: absolute;
-    bottom: 0;
-    top:25%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: 500;
-    color: white;
-}
-
-@media only screen and (min-width: 768px){
-    article img{
-        height: 223px;
+    & img {
+        height: 111px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        filter: brightness(70%);
+        @media only screen and (min-width: 768px) {
+            height: 223px;
+        }
     }
-    article h1{
-        top: 40%;
-        font-size: 2em;
+    & h1 {
+        position: absolute;
+        bottom: 0;
+        top: 25%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 500;
+        color: white;
+        @media only screen and (min-width: 768px) {
+            top: 40%;
+            font-size: 2em;
+        }
     }
 }

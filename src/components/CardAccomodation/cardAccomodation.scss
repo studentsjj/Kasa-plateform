@@ -2,60 +2,61 @@ h1 {
     font-size: 1.4rem;
     font-weight: 500;
 }
-h2{
+h2 {
     font-size: 1rem;
     font-weight: 500;
 }
-.accomodation-container-rating-host{
-    display:flex;
-    justify-content: space-between;
-    
-}
-.accomodation-host{
+.accomodation__rating-host {
     display: flex;
     justify-content: space-between;
-}
-.accomodation-host p{
-    display: flex;
-    align-items: center;
-    width: 93px;
-    height: 33px;
-    text-align: end;
-    font-size: 0.8em;
-    margin-right: 6px;
-}
-.accomodation-host img{
-    display: flex;
-    align-self: center;
-    width: 3em;
-    height: 3em;
-    border-radius: 50%;
-}
-@media only screen and (min-width: 768px){
-    .accomodation-banner{
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;;
-    }
-.accomodation-collapse-container{
-    display: flex;
-    justify-content: space-between;
-    }
-    
-.accomodation-collapse{
-    height: 100%;
-    width: 49%;
-    }
-    .accomodation-container-rating-host{
+    @media only screen and (min-width: 768px) {
         flex-direction: column-reverse;
         align-items: flex-end;
     }
-    .accomodation-host img{
-        width: 4em;
-        height: 4em;
+}
+.accomodation__host--content {
+    display: flex;
+    justify-content: space-between;
+    & p {
+        display: flex;
+        align-items: center;
+        width: 93px;
+        height: 33px;
+        text-align: end;
+        font-size: 0.8em;
+        margin-right: 6px;
+        @media only screen and (min-width: 768px) {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
     }
-    .accomodation-host p{
-        font-size: 1.2em;
-        margin-right: 10px;
+    & img {
+        display: flex;
+        align-self: center;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        @media only screen and (min-width: 768px) {
+            width: 4em;
+            height: 4em;
+        }
     }
+}
+
+@media only screen and (min-width: 768px) {
+    .accomodation__banner {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .accomodation__collapse {
+        display: flex;
+        justify-content: space-between;
+        &--content {
+        height: 100%;
+        width: 49%;
+    }
+    }
+    
+  
 }

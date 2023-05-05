@@ -1,32 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Montserrat:wght@500&family=Raleway:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Montserrat:wght@500&family=Raleway:wght@400;700&display=swap");
 
-html, body{
+$primary-color : #ff6060;
+
+html,
+body {
     max-width: 1440px;
     margin: 0 auto;
-    padding:0;
-    min-height:100vh;
+    padding: 0;
+    min-height: 100vh;
     box-sizing: border-box;
 }
 
-body{
+body {
     position: relative;
-    font-family:'Montserrat';
-    color: #FF6060;
+    font-family: "Montserrat";
+    color: $primary-color;
     padding-bottom: 20px;
 }
 
-main{
+main {
     margin: 20px;
-}
 
-
-
-@media only screen and (min-width: 768px){
-    main{
+    @media only screen and (min-width: 768px) {
         margin: 40px 100px 0 100px;
     }
-    
-    .gallery{
+}
+
+@media only screen and (min-width: 768px) {
+    .gallery {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
@@ -35,10 +36,9 @@ main{
         background-color: #f7f7f7;
         border-radius: 25px;
         height: 100%;
+
+        &__card {
+            width: 32%;
+        }
     }
-    .gallery-card{
-        width:32%;
-        margin:0;
-    }
- 
 }

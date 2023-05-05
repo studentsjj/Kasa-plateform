@@ -15,29 +15,40 @@ function Slideshow({ accomodations }) {
 
     return (
         <div className="slideshow">
-                {accomodations.pictures.map((picture, index) => {
-                    return (
-                        index === count && (
-                            <img className="slideshow-img" key={index} src={picture} alt="" />
-                        )
-                    );
-                })}
-            
-                {lenghtPictures > 1 ?
-                (<div className="btn-count-accomodation">
-                        
-                                <img id="btn-prev" onClick={prevSlide} src={icon_prev} alt="" />
-                            
-                           
-                                <img id="btn-next" onClick={nextSlide} src={icon_next} alt="" />
-                           
-                        
-                        <span className="slideshow-count">
-                            {count + 1}/{lenghtPictures}
-                        </span>
-                    
-               </div>) : null }
-           
+            {accomodations.pictures.map((picture, index) => {
+                return (
+                    index === count && (
+                        <img
+                            className="slideshow__img"
+                            key={index}
+                            src={picture}
+                            alt=""
+                        />
+                    )
+                );
+            })}
+
+            {lenghtPictures > 1 ? (
+                <div className="slideshow__btn-count">
+                    <img
+                        id="btn-prev"
+                        onClick={prevSlide}
+                        src={icon_prev}
+                        alt=""
+                    />
+
+                    <img
+                        id="btn-next"
+                        onClick={nextSlide}
+                        src={icon_next}
+                        alt=""
+                    />
+
+                    <span className="slideshow__count">
+                        {count + 1}/{lenghtPictures}
+                    </span>
+                </div>
+            ) : null}
         </div>
     );
 }

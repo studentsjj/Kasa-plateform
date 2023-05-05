@@ -7,32 +7,27 @@ function Collapse({ title, content }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="collapse-container">
-            <span className="collapse-label">
+        <div className="collapse">
+            <span className="collapse__label">
                 {title}
-                <button
+                <img
                     onClick={() => {
                         setIsOpen(!isOpen);
                     }}
-                >
-                    <img
-                        src={icon_collapse}
-                        alt="flèche accès contenu"
-                        className={!isOpen ? "icon-rotate": undefined}
-                    />
-                </button>
+                    src={icon_collapse}
+                    alt="flèche accès contenu"
+                    className={!isOpen ? "icon-rotate" : undefined}
+                />
             </span>
             {isOpen ? (
                 Array.isArray(content) ? (
                     content.map((content, index) => (
-                        <span key={index}>
-                            <ul className="collapse-content-ul">
-                                <li>{content}</li>
-                            </ul>
-                        </span>
+                        <ul key={index} className="collapse__content--ul">
+                            <li>{content}</li>
+                        </ul>
                     ))
                 ) : (
-                    <span className="collapse-content">{content}</span>
+                    <span className="collapse__content">{content}</span>
                 )
             ) : null}
         </div>

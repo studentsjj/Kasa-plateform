@@ -1,19 +1,17 @@
 .page-error {
     text-align: center;
     margin-top: 25%;
-    padding: 0, 20px,0,20px;
+    padding: 0 20px 0 20px;
     height: 62vh;
-}
-.page-error-number{
-    font-size: 96px;
-    font-weight: 700;
-}
 
-.page-error p{
-    font-size: 18px;
+    &__number {
+        font-size: 96px;
+        font-weight: 700;
+    }
+    & p {
+        font-size: 1em;
+    }
+    & a {
+        text-decoration-line: underline;
+    }
 }
-
-.page-error link {
-    text-decoration-line: underline;
-}
-

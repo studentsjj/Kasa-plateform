@@ -45,10 +45,10 @@ function Accomodation() {
                     <div>Chargement...</div>
                 ) : (error? (
                 <Error /> ): (
-                    <div>
+                    <>
                         <Slideshow accomodations={accomodation} />
                         <CardAccomodation accomodations={accomodation} />
-                    </div>
+                    </>
                 ))}
             </main>
             <Footer />
