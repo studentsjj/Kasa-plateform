@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Kasa-plateform.github.io/static/css/main.4c5d4d91.css",
+    "main.js": "/Kasa-plateform.github.io/static/js/main.e0921406.js",
+    "static/js/787.c76de069.chunk.js": "/Kasa-plateform.github.io/static/js/787.c76de069.chunk.js",
+    "static/media/img_about.png": "/Kasa-plateform.github.io/static/media/img_about.dc7a08e1faa2e14de0bd.png",
+    "static/media/img_home.png": "/Kasa-plateform.github.io/static/media/img_home.1168be13650bb18b456e.png",
+    "index.html": "/Kasa-plateform.github.io/index.html",
+    "main.4c5d4d91.css.map": "/Kasa-plateform.github.io/static/css/main.4c5d4d91.css.map",
+    "main.e0921406.js.map": "/Kasa-plateform.github.io/static/js/main.e0921406.js.map",
+    "787.c76de069.chunk.js.map": "/Kasa-plateform.github.io/static/js/787.c76de069.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c5d4d91.css",
+    "static/js/main.e0921406.js"
+  ]
+}
