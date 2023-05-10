@@ -5,7 +5,6 @@ import Header from "../../layouts/Header";
 import Footer from "../../layouts/Footer";
 import CardAccomodation from "../../components/CardAccomodation";
 import Slideshow from "../../components/Slideshow";
-import "./accomodation.scss";
 
 
 function Accomodation() {

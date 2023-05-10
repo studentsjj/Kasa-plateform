@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 article {
     position: relative;
 
@@ -20,10 +22,9 @@ article {
         text-align: center;
         font-size: 1.5em;
         font-weight: 500;
-        color: white;
+        color: $letters-color;
         @media only screen and (min-width: 768px) {
-            top: 40%;
-            font-size: 2em;
+            font-size: 3em;
         }
     }
 }

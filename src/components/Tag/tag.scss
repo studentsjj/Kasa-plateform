@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .accomodation__tags{
     display: flex;
     justify-content: flex-start;
@@ -9,8 +11,8 @@
         margin-right: 0.75em;
         border-radius: 5px;
         font-size: 0.75em;
-        color: white;
-        background-color: #FF6060;
+        color: $letters-color;
+        background-color: $primary-color;
         list-style-type: none;
     }
 }

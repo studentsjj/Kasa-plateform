@@ -16,7 +16,7 @@ function Collapse({ title, content }) {
                     }}
                     src={icon_collapse}
                     alt="flèche accès contenu"
-                    className={!isOpen ? "icon-rotate" : undefined}
+                    className={!isOpen ? "icon-rotate" : ""}
                 />
             </span>
             {isOpen ? (

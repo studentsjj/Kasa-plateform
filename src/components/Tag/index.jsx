@@ -1,6 +1,6 @@
 import "./tag.scss"
 
 function Tag({ tag }) {
-    return <div className="accomodation__tags--content">{tag}</div>;
+    return <span className="accomodation__tags--content">{tag}</span>;
 }
 export default Tag;

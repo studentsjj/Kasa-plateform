@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -5,6 +7,10 @@
     @media only screen and (min-width: 768px) {
             margin: 40px 100px 0 100px;
         }
+    & img {
+        max-width:33%;
+        object-fit: contain;
+    }
 
     &__navbar {
         display: flex;
@@ -19,7 +25,7 @@
             }
             & a {
                 text-decoration: none;
-                color: #ff6060;
+                color: $primary-color;
                 cursor: pointer;
                 font-size: 0.9em;
                 @media only screen and (min-width: 768px) {

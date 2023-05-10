@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .slideshow {
     position: relative;
     &__img {
@@ -17,7 +19,7 @@
         text-align: center;
         color: transparent;
         @media only screen and (min-width: 768px) {
-            color: white;
+            color: $letters-color;
         }
     }
 }
