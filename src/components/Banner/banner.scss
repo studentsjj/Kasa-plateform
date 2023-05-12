@@ -2,29 +2,29 @@
 
 article {
     position: relative;
-
     & img {
         height: 111px;
         width: 100%;
         object-fit: cover;
         border-radius: 10px;
         filter: brightness(70%);
-        @media only screen and (min-width: 768px) {
+        @media (min-width: 768px) {
             height: 223px;
         }
     }
     & h1 {
         position: absolute;
         bottom: 0;
-        top: 25%;
+        top: 20%;
         left: 0;
         right: 0;
         text-align: center;
         font-size: 1.5em;
         font-weight: 500;
         color: $letters-color;
-        @media only screen and (min-width: 768px) {
-            font-size: 3em;
+        @media (min-width: 768px) {
+            top:25%;
+            font-size: 2.8em;
         }
     }
 }

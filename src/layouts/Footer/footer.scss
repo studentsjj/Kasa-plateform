@@ -1,6 +1,6 @@
 @import "../../styles/variables.scss";
 
-.footer {
+footer {
     position: absolute;
     top: 100%;
     width: 100%;
@@ -9,7 +9,6 @@
     background-color: $footer-color;
     padding: 60px 0 20px 0;
     color: $letters-color;
-
     & img {
         width: 122px;
         margin: auto;

@@ -1,18 +1,29 @@
 @import "../../styles/variables.scss";
 
-.accomodation__tags{
+.accomodation__tags {
     display: flex;
     justify-content: flex-start;
-    &--content{
+    &--content {
         display: flex;
         justify-content: center;
+        text-align: center;
+        padding: 2px;
         line-height: 150%;
-        padding: 6px;
+        width: 84px;
+        height: 18px;
         margin-right: 0.75em;
         border-radius: 5px;
-        font-size: 0.75em;
+        font-size: 0.7em;
         color: $letters-color;
         background-color: $primary-color;
         list-style-type: none;
+        @media (min-width: 768px) {
+            border-radius: 10px;
+            width: 115px;
+            height: 25px;
+            padding : 6px 4px 2px 4px;
+            font-size: 0.9em;
+            
+        }
     }
 }

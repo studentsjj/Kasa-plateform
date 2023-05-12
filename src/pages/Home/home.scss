@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Montserrat:wght@500&family=Raleway:wght@400;700&display=swap");
 @import "../../styles/variables.scss";
 
-html, body {
+html,
+body {
     padding: 0;
     min-height: 100vh;
     box-sizing: border-box;
@@ -18,13 +19,12 @@ body {
 
 main {
     margin: 20px;
-
-    @media only screen and (min-width: 768px) {
-        margin: 40px 100px 0 100px;
+    @media (min-width: 768px) {
+        margin: 20px 100px 0 100px;
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .gallery {
         display: flex;
         justify-content: space-around;
@@ -34,7 +34,6 @@ main {
         background-color: #f7f7f7;
         border-radius: 25px;
         height: 100%;
-
         &__card {
             width: 32%;
         }

@@ -27,7 +27,6 @@ function Slideshow({ accomodations }) {
                     )
                 );
             })}
-
             {lenghtPictures > 1 ? (
                 <div className="slideshow__btn-count">
                     <img
@@ -36,14 +35,12 @@ function Slideshow({ accomodations }) {
                         src={icon_prev}
                         alt=""
                     />
-
                     <img
                         id="btn-next"
                         onClick={nextSlide}
                         src={icon_next}
                         alt=""
                     />
-
                     <span className="slideshow__count">
                         {count + 1}/{lenghtPictures}
                     </span>

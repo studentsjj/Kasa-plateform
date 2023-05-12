@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import icon_collapse from "../../assets/icon_collapse.png";
-
 import "./collapse.scss";
 
 function Collapse({ title, content }) {
@@ -20,15 +19,22 @@ function Collapse({ title, content }) {
                 />
             </span>
             {isOpen ? (
-                Array.isArray(content) ? (
-                    content.map((content, index) => (
-                        <ul key={index} className="collapse__content--ul">
-                            <li>{content}</li>
-                        </ul>
-                    ))
-                ) : (
-                    <span className="collapse__content">{content}</span>
-                )
+                <span className="collapse__content">
+                    {Array.isArray(content) ? (
+                        content.map((content, index) => {
+                            return (
+                                <li
+                                    key={index}
+                                    className="collapse__content--list"
+                                >
+                                    {content}
+                                </li>
+                            );
+                        })
+                    ) : (
+                        <span>{content}</span>
+                    )}
+                </span>
             ) : null}
         </div>
     );

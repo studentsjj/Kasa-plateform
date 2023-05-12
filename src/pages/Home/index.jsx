@@ -31,7 +31,10 @@ function Home() {
                     ) : (
                         data &&
                         data.map((accomodation) => (
-                            <div className="gallery__card" key={accomodation.id}>
+                            <div
+                                className="gallery__card"
+                                key={accomodation.id}
+                            >
                                 <Link to={`/Accomodation/${accomodation.id}`}>
                                     <Card
                                         cover={accomodation.cover}
